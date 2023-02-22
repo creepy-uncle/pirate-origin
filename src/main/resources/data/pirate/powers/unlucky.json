@@ -1,0 +1,11 @@
+{
+  "name": "Unlucky",
+  "description": "The odds are against you. You are unluckier than normal.",
+  "type": "origins:attribute",
+  "modifier": {
+    "name": "luck decrease",
+    "attribute": "minecraft:generic.luck",
+    "value": -5,
+    "operation": "addition"
+  }
+}

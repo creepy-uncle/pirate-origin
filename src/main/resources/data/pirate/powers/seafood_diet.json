@@ -1,0 +1,11 @@
+{
+  "name": "Seafood Diet",
+  "description": "You can't eat anything other than fish, golden apples, enchanted golden apples, dried kelp, bread, and chorus fruit!",
+  "type": "origins:prevent_item_use",
+  "item_condition": {
+    "type": "origins:ingredient",
+    "ingredient": {
+      "item": "minecraft:cake"
+    }
+  }
+}

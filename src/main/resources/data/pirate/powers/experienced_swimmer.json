@@ -1,0 +1,9 @@
+{
+	"type": "origins:modify_swim_speed",
+	"name": "Experienced Swimmer",
+	"description": "All your days sailing the ocean improved how fast you can swim!",
+	"modifier": {
+		"operation": "addition",
+		"value": 0.015
+	}
+}

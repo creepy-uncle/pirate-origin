@@ -1,0 +1,130 @@
+{
+  "name": "Third Eye",
+  "description": "You are able to know when storage blocks are around you. You hear a ding that gets faster as the block gets closer to you.",
+  "type": "origins:multiple",
+  "toggle":{
+    "type": "origins:toggle",
+    "active_by_default": false,
+    "key": {
+      "key": "key.origins.secondary_active"
+    }
+  },
+  "sense20": {
+    "type": "origins:action_over_time",
+    "interval": 30,
+    "entity_action": {
+      "type": "origins:execute_command",
+      "command": "playsound minecraft:entity.arrow.hit_player master @s"
+    },
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:block_in_radius",
+          "block_condition": {
+            "type": "origins:in_tag",
+            "tag": "pirate:storage"
+          },
+          "shape": "sphere",
+          "radius": 20
+        },
+        {
+          "type": "origins:power_active",
+          "power": "*:*_toggle"
+        }
+      ]
+    }
+  },
+  "sense10": {
+    "type": "origins:action_over_time",
+    "interval": 20,
+    "entity_action": {
+      "type": "origins:execute_command",
+      "command": "playsound minecraft:entity.arrow.hit_player master @s"
+    },
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:block_in_radius",
+          "block_condition": {
+            "type": "origins:in_tag",
+            "tag": "pirate:storage"
+          },
+          "shape": "sphere",
+          "radius": 10
+        },
+        {
+          "type": "origins:power_active",
+          "power": "*:*_toggle"
+        }
+      ]
+    }
+  },
+  "sense5": {
+    "type": "origins:action_over_time",
+    "interval": 10,
+    "entity_action": {
+      "type": "origins:execute_command",
+      "command": "playsound minecraft:entity.arrow.hit_player master @s"
+    },
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:block_in_radius",
+          "block_condition": {
+            "type": "origins:in_tag",
+            "tag": "pirate:storage"
+          },
+          "shape": "sphere",
+          "radius": 5
+        },
+        {
+          "type": "origins:power_active",
+          "power": "*:*_toggle"
+        }
+      ]
+    }
+  },
+  "sense1": {
+    "type": "origins:action_over_time",
+    "interval": 5,
+    "entity_action": {
+      "type": "origins:execute_command",
+      "command": "playsound minecraft:entity.arrow.hit_player master @s"
+    },
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:block_in_radius",
+          "block_condition": {
+            "type": "origins:in_tag",
+            "tag": "pirate:storage"
+          },
+          "shape": "sphere",
+          "radius": 1
+        },
+        {
+          "type": "origins:power_active",
+          "power": "*:*_toggle"
+        }
+      ]
+    }
+  },
+  "gui": {
+    "type": "origins:resource",
+    "min": 0,
+    "max": 1,
+    "start_value": 1,
+    "hud_render": {
+      "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
+      "bar_index": 0,
+      "condition": {
+        "type": "origins:power_active",
+        "power": "*:*_toggle"
+      }
+    }
+  }
+}

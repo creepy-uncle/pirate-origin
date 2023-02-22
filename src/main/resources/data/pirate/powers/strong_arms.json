@@ -1,0 +1,10 @@
+{
+  "type": "origins:attribute",
+  "name": "Strong Arms",
+  "description": "Hard work on the ship paid off, you can mine blocks slightly faster and do slightly more damage!",
+  "modifier": {
+    "attribute": "minecraft:generic.attack_damage",
+    "value": 1,
+    "operation": "multiply_base"
+  }
+}
